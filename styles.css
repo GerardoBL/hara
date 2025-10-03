@@ -1,0 +1,116 @@
+:root{
+  --bg:#0f2d1f;        /* verde bosque */
+  --ink:#ebe6dc;       /* marfil suave para textos */
+  --ink-70:rgba(235,230,220,.7);
+  --line:rgba(235,230,220,.35);
+  --maxw:72rem;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:clamp(24px,4vw,48px);
+  isolation:isolate;
+}
+
+.hero__bg{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(0deg, rgba(15,45,31,.55), rgba(15,45,31,.55)),
+    var(--hero-bg) center 30% / cover no-repeat; /* centra y sube el foco */
+  filter:saturate(.8);
+  z-index:-1;
+}
+
+.hero__content{
+  width:100%;
+  max-width:var(--maxw);
+  text-align:center;
+}
+
+.hero__title{
+  font-family:"Playfair Display", serif;
+  font-weight:700;
+  letter-spacing:.08em;
+  line-height:1.02;
+  text-transform:uppercase;
+  margin:0 0 .8rem 0;
+  font-size:clamp(2.2rem, 6vw, 5rem);
+}
+
+.hero__title span:last-child{display:block; font-size:clamp(2.8rem, 8vw, 6rem)}
+
+.hero__kicker{
+  font-family:"Playfair Display", serif;
+  font-size:clamp(1.1rem, 2.5vw, 1.5rem);
+  margin:.2rem 0 .4rem;
+  color:var(--ink-70);
+}
+
+.hero__sub{
+  margin:.25rem 0 1.8rem;
+  letter-spacing:.03em;
+  color:var(--ink-70);
+}
+
+/* Formulario */
+.signup{
+  position:relative;
+  margin-inline:auto;
+  width:min(800px, 92vw);
+}
+
+.signup input{
+  width:100%;
+  height:64px;
+  padding:0 72px 0 20px;
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--line);
+  border-radius:6px;
+  font-size:1.05rem;
+  outline:none;
+  transition:border-color .2s, box-shadow .2s, background-color .2s;
+}
+.signup input::placeholder{color:rgba(235,230,220,.55)}
+.signup input:focus{
+  border-color:var(--ink);
+  box-shadow:0 0 0 3px rgba(235,230,220,.15);
+  background:rgba(255,255,255,.02);
+}
+
+.signup__btn{
+  position:absolute; right:6px; top:6px; bottom:6px;
+  width:56px; display:grid; place-items:center;
+  background:transparent; color:var(--ink);
+  border:1px solid var(--line);
+  border-radius:6px; cursor:pointer;
+  transition:border-color .2s, transform .08s ease-in-out, background-color .2s;
+}
+.signup__btn:hover{border-color:var(--ink)}
+.signup__btn:active{transform:translateY(1px)}
+
+.hero__legal{
+  display:block;
+  margin-top:14px;
+  font-size:.85rem;
+  color:rgba(235,230,220,.55);
+}
+
+/* Accesibilidad */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
