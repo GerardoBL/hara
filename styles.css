@@ -1,5 +1,5 @@
 :root{
-  --bg:#0f2d1f;        /* verde bosque */
+  --bg:#2d0f11;        /* verde bosque (tu comentario original) */
   --ink:#ebe6dc;       /* marfil suave para textos */
   --ink-70:rgba(235,230,220,.7);
   --line:rgba(235,230,220,.35);
@@ -27,9 +27,8 @@ body{
 
 .hero__bg{
   position:absolute; inset:0;
-  background:
-    linear-gradient(0deg, rgba(15,45,31,.55), rgba(15,45,31,.55)),
-    var(--hero-bg) center 30% / cover no-repeat; /* centra y sube el foco */
+  /* >>> AQUÍ QUITAMOS LA SOMBRA (gradiente). Dejamos solo la imagen: */
+  background: var(--hero-bg) center 30% / cover no-repeat; /* centra y sube el foco */
   filter:saturate(.8);
   z-index:-1;
 }
