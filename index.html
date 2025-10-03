@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Be the first to know — Marca</title>
+
+  <!-- Tipografías: serif elegante + sans moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <!-- Cambia hero.jpg por tu foto (de preferencia retrato lateral) -->
+    <div class="hero__bg" style="--hero-bg:url('hero.jpg')"></div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span>BE THE FIRST TO</span>
+        <span>KNOW</span>
+      </h1>
+
+      <p class="hero__kicker">What’s coming soon</p>
+      <p class="hero__sub">Sign up for 10% off on your next purchase</p>
+
+      <form class="signup" action="subscribe.php" method="post" novalidate>
+        <label for="email" class="sr-only">Correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="Email address" required />
+        <button class="signup__btn" aria-label="Enviar">
+          <!-- Flecha -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <small class="hero__legal">Al registrarte aceptas recibir novedades. Puedes darte de baja cuando quieras.</small>
+    </div>
+  </header>
+</body>
+</html>
